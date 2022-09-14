@@ -1,4 +1,4 @@
-console.log('Linked.')
+// console.log('Linked.')
 
 // Dramatis Personae
 const hobbits = [
@@ -30,7 +30,7 @@ function makeMiddleEarth() {
 for (let i = 0; i < lands.length; i++){
 	
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
-	const artTag = document.createElement ('article')
+	const artTag = document.createElement('article')
 	//   2b. gives each land article an `id` tag of the corresponding land name
 artTag.setAttribute('id', lands[i])
 	//   2c. includes an h1 with the name of the land inside each land article
@@ -39,10 +39,12 @@ h1Tag.innerHTML = lands[i]
 artTag.appendChild(h1Tag)
 	//   2d. appends each land to the middle-earth section
 middleEarth.appendChild(artTag)
+}
 	// 3. append the section to the body of the DOM.
-}document.body.appendChild(middleEarth)
+document.body.appendChild(middleEarth)
 }
 
+// makeMiddleEarth()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -54,14 +56,19 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-	const ulHobbit =document.createElement('ul')
-		for (var i = 0; i < hobbits.length; i++) {
+	const ulHobbit = document.createElement('ul')
+		for (var i = 0; i < hobbits.length; i++){
 	 		const hobbitName = document.createElement('li')
 			hobbitName.setAttribute('class', 'hobbit')
-			hobbitName.innerHTML = hobbits[i]
+			hobbitName.innerHTML= hobbits[i]
 			ulHobbit.appendChild(hobbitName)
 	}
-	
+	 document.getElementById('The-Shire').appendChild(ulHobbit)
+}
+// function makeHobbits(){
+// 	console.log('2: makeHobbits')
+// 	const ulHobbit=document.createElement()
+
 	// give each hobbit a class of `hobbit`
 	// makeHobbits = document.createElement ('class')
 
@@ -69,8 +76,9 @@ function makeHobbits() {
 
 	// hint: get 'The-Shire' by using its id
 	
-document.getElementById("The-Shire").appendChild(ulHobbit)
-}
+// // document.getElementById("The-Shire").appendChild(hobbitList)
+// }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -80,21 +88,40 @@ document.getElementById("The-Shire").appendChild(ulHobbit)
 // ============
 
 function keepItSecretKeepItSafe() {
-	console.log('3: keepItSecretKeepItSafe')
-
-	// create a div with an id of `'the-ring'`
-
-	// give the div a class of `'magic-imbued-jewelry'`
-
-	// add the ring as a child of `Frodo`
+	const theRing = document.createElement('div')
+	theRing.setAttribute('id', 'the-ring')
+	theRing.setAttribute('class', 'magic-imbued-jewelry')
+	for(let i= 0; i < hobbits.length; i++) {
+		if(document.getElementsByClassName("hobbit")[i].innerHTML === "Frodo Baggins"){
+			document.getElementsByClassName("hobbit")[i].appendChild(theRing)
+			document.getElementsByClassName("hobbit")[i].setAttribute('id', 'Frodo')
+		}
+	}
 }
+	// console.log('3: keepItSecretKeepItSafe')
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
+// 	// create a div with an id of `'the-ring'`
+// const theRing = document.createElement('div')
 
-// ============
-// Chapter 4
-// ============
+// theRing.setAttribute('id', 'the-ring')
+// // give the div a class of `'magic-imbued-jewelry'`
+// theRing.setAttribute('class','magic-imbued-jewelry') }
+// 	// add the ring as a child of `Frodo`
+
+// 	for (let i = 0; i < hobbits.length; i++) {
+// 		if(document.getElementsByClassName("hobbit")[i].innerHTML === "frodo Baggins") {
+// 			document.getElementsByClassName("hobbit")[i].appendChild(theRing)
+// 			// console.log(hobbits)
+// 		}
+// 	}
+
+
+// // COMMIT YOUR WORK
+// // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
+
+// // ============
+// // Chapter 4
+// // ============
 
 function makeBaddies() {
 	console.log('4: makeBaddies')
