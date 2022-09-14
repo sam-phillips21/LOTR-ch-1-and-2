@@ -127,10 +127,24 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-
+const ulBaddies = document.createElement('ul')
+	for (let i = 0; i < baddies.length; i++){
 	// give each of the baddies a class of "baddy"
-
+const baddiesClass = document.createElement('li')
+	baddiesClass.setAttribute('class', 'baddy' )
+	baddiesClass.innerHTML = baddies[i]
+	ulBaddies.appendChild(baddiesClass)
+	// console.log(baddiesClass)
+}
 	// remember to append them to Mordor
+	document.getElementById('Mordor').appendChild(ulBaddies)
+		
+// 	   hobbitName.setAttribute('class', 'hobbit')
+// 	   hobbitName.innerHTML= hobbits[i]
+// 	   ulHobbit.appendChild(hobbitName)
+// }
+// document.getElementById('The-Shire').appendChild(ulHobbit)
+// }
 }
 
 // COMMIT YOUR WORK
@@ -144,9 +158,11 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+let asTag= document.createElement(`aside`)
 	// put an `unordered list` of the `'buddies'` in the aside
-
+const ulBuddies = createElement('ul')
+	let buddiesli = document.createElement('li')
+	for ()
 	// insert your aside as a child element of `rivendell`
 }
 
