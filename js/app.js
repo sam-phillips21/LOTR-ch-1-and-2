@@ -185,6 +185,14 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	
+	// const ulHobbit = document.getElementById('ul')
+	let Rivendell=document.getElementById('Rivendell')
+	let shr= document.getElementById('The-Shire')
+	
+	const lHobbit = (shr.children[1])
+	Rivendell.appendChild(lHobbit)
+	
 }
 
 // COMMIT YOUR WORK
@@ -196,7 +204,7 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	let stride = getElementById()
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
